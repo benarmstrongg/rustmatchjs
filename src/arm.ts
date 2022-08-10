@@ -1,6 +1,6 @@
 export type MatchExprArm<I, O> = { matcher: MatchExprArmMatcher<I>, res: MatchExprArmValue<I, O> };
 export type MatchExprDefaultArm<I, O> = MatchExprArm<I, O> & {
-    res: (_: any) => O
+    res: ((_: any) => O) | O
     __rustmatchjsIsDefaultArm: true
 };
 
@@ -13,7 +13,7 @@ export function matchValue<I, O>(matcher: MatchExprArmMatcher<I>, res: MatchExpr
     return { matcher, res };
 }
 
-export function matchDefault<O>(res: (_: any) => O): MatchExprDefaultArm<any, O> {
+export function matchDefault<O>(res: ((_: any) => O) | O): MatchExprDefaultArm<any, O> {
     return { matcher: null as any, res, __rustmatchjsIsDefaultArm: true };
 }
 
