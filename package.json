@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "build": "rollup -c",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "yarn test -- --watch"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
