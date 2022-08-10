@@ -1,6 +1,7 @@
 # rustmatchjs
 
 ![ts](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
+[![npm version](https://badge.fury.io/js/rustmatchjs.svg)](https://www.npmjs.com/package/rustmatchjs)
 ![bundle size](https://img.badgesize.io/benarmstrongg/rustmatchjs/main/dist/index.js)
 ![bundle size](https://img.badgesize.io/benarmstrongg/rustmatchjs/main/dist/index.js?compression=gzip)
 
