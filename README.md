@@ -9,7 +9,7 @@ This package provides a set of functions to replicate the Rust language's `match
 
 The first matching arm will be executed and its value returned. Thanks to some magic from Typescript, this can come kinda close to Rust `match`. The input type, `I`, will be inferred from the first argument and passed into arms' callback functions. The output type, `O`, will be inferred from the type or return type of the first arm's `res` arg. Finally, a default arm *must* be included as the last argument. Since Typescript can't make sure your branches are exhaustive, this ensures some value is always returned.
 
-Sample:
+Usage:
 ```typescript
 const message = match(response.code,
     match.val(200, 'Fetched successfully!'),
