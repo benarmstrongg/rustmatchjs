@@ -11,6 +11,14 @@ This package provides a set of functions to replicate the Rust language's `match
 
 The first matching arm will be executed and its value returned. For `match.val` arms, a shallow comparison is performed to allow matching on objects. Thanks to some magic from Typescript, this can come kinda close to Rust `match`. The input type, `I`, will be inferred from the first argument and the output type, `O`, will be inferred from the type or return type of the first arm's `res` arg. Finally, a default arm *must* be included as the last argument. Since Typescript can't make sure your branches are exhaustive, this ensures some value is always returned.
 
+## Installation: 
+```sh
+# yarn
+yarn add rustmatchjs 
+# npm
+npm i rustmatchjs 
+```
+
 ## Usage:
 ```typescript
 const message = match(response,
