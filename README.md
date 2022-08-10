@@ -4,9 +4,7 @@ Rust `match` is cool. I wish it were in js.
 
 This package provides a set of functions to replicate the Rust language's `match` expression. Unlike the `switch` statement in Javascript, `match` is an expression, which makes it perfect for conditionally assigning one value based on another in a readable way.
 
-The first matching arm will be executed and its value returned. Thanks to some magic from Typescript, this can come kind of close to Rust `match`. The input type, `I`, will be inferred from the first argument and passed into arms' callback functions. The output type, `O`, will be inferred from the type or return type of the first arm's `res` arg. Finally, a default arm *must* be included as the last argument. Since TS can't make sure your branches are exhaustive, this ensures some value is always returned.
-
-
+The first matching arm will be executed and its value returned. Thanks to some magic from Typescript, this can come kinda close to Rust `match`. The input type, `I`, will be inferred from the first argument and passed into arms' callback functions. The output type, `O`, will be inferred from the type or return type of the first arm's `res` arg. Finally, a default arm *must* be included as the last argument. Since Typescript can't make sure your branches are exhaustive, this ensures some value is always returned.
 
 Sample:
 ```typescript
@@ -38,7 +36,7 @@ const tags = match(product,
     match.$$(product => {
             const isTv = product.description === 'This is a TV.';
             if (isTv) {
-                console.log('remove this from the store');
+                console.log('remove this from the store its a clothing store');
                 return true;
             }
             return false;
@@ -47,4 +45,5 @@ const tags = match(product,
     // default
     match.d(_ => ['untagged']),
     match._(_ => [])
+);
 ```
