@@ -1,0 +1,19 @@
+{
+  "name": "rustmatchjs",
+  "version": "0.0.1",
+  "description": "Rust match is cool. I wish it were in js",
+  "main": "index.js",
+  "author": "ben armstrong",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "rollup": "^2.77.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
