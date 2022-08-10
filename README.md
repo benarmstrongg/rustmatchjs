@@ -23,6 +23,7 @@ const message = match(response,
         console.log(`Server error ${response.code}. Err: ${response.error}`);
         return 'Not your fault friend';
     }),
+    match.fn(response => response.error !== null, response.error),
     match.default('I do not know how to handle this'),
     // alias for match.default
     match._(() => 'I do not know how to handle this')
