@@ -3,15 +3,8 @@ import { matchValue, matchDefault, matchFn } from "./arm";
 
 export type MatchExpr = (<I, O> (value: I, ...arms: [...MatchExprArm<I, O>[], MatchExprDefaultArm<I, O>]) => O) & {
     val: typeof matchValue;
-    v: typeof matchValue;
-    $: typeof matchValue;
-
     fn: typeof matchFn;
-    f: typeof matchFn;
-    $$: typeof matchFn;
-
     default: typeof matchDefault;
-    d: typeof matchDefault;
     _: typeof matchDefault;
 };
 
@@ -30,11 +23,6 @@ export const match: MatchExpr = <I, O>(value: I, ...arms: [...MatchExprArm<I, O>
     return getResult(matchingArm || defaultArm);
 }
 match.val = matchValue;
-match.v = matchValue;
-match.$ = matchValue;
-match.default = matchDefault;
-match.d = matchDefault;
-match._ = matchDefault;
 match.fn = matchFn;
-match.f = matchFn;
-match.$$ = matchFn;
+match.default = matchDefault;
+match._ = matchDefault;
