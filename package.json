@@ -1,9 +1,13 @@
 {
   "name": "rustmatchjs",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Rust match is cool. I wish it were in js",
   "main": "dist/index.js",
   "author": "ben armstrong",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benarmstrongg/rustmatchjs.git"
+  },
   "license": "MIT",
   "keywords": [
     "match",
@@ -16,7 +20,8 @@
     "prepare": "husky install",
     "build": "rollup -c",
     "test": "jest --coverage",
-    "test:watch": "yarn test -- --watch"
+    "test:watch": "yarn test -- --watch",
+    "prepublish": "yarn test && yarn build"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
