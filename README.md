@@ -1,5 +1,7 @@
 # rustmatchjs
 
+![bundle size](https://img.badgesize.io/benarmstrongg/rustmatchjs/main/dist/index.js?compression=gzip)
+
 Rust `match` is cool. I wish it were in js.
 
 This package provides a set of functions to replicate the Rust language's `match` expression. Unlike the `switch` statement in Javascript, `match` is an expression, which makes it perfect for conditionally assigning one value based on another in a readable way.
