@@ -1,5 +1,6 @@
 # rustmatchjs
 
+![bundle size](https://img.badgesize.io/benarmstrongg/rustmatchjs/main/dist/index.js)
 ![bundle size](https://img.badgesize.io/benarmstrongg/rustmatchjs/main/dist/index.js?compression=gzip)
 
 Rust `match` is cool. I wish it were in js.
