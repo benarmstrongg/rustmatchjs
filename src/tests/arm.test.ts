@@ -13,7 +13,7 @@ describe('matchDefault', () => {
     it('should create MatchExprDefaultArm obj with res', () => {
         const cb = () => 'test';
         const arm = matchDefault(cb);
-        expect(arm.__rustmatchjsIsDefaultArm).toEqual(true);
+        expect(arm.__isDefaultArm).toEqual(true);
         expect(arm.matcher).toEqual(null);
         expect(arm.res).toEqual(cb);
     })
@@ -25,7 +25,7 @@ describe('matchFn', () => {
         const cb = () => 'test';
         const arm = matchFn(fn, cb);
         const matcher = arm.matcher as MatchExprArmMatcherFn<number>;
-        expect(matcher.__rustmatchjsIsConditionalMatcher).toEqual(true);
+        expect(matcher.__IsFnArm).toEqual(true);
         expect(matcher.fn).toEqual(fn);
         expect(arm.res).toEqual(cb);
     });
