@@ -7,5 +7,8 @@ export default {
         dir: './dist',
         format: 'cjs'
     },
-    plugins: [typescript(), uglify()]
+    plugins: [
+        typescript({ exclude: ['**/*.test.ts'] }),
+        uglify()
+    ]
 };
