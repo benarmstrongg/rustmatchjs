@@ -5,6 +5,13 @@
   "main": "dist/index.js",
   "author": "ben armstrong",
   "license": "MIT",
+  "keywords": [
+    "match",
+    "rust"
+  ],
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "prepare": "husky install",
     "build": "rollup -c",
